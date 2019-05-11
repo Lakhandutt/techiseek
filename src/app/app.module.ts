@@ -18,6 +18,10 @@ import { SidenavComponent } from './Components/sidenav/sidenav.component';
 import { LaptopsComponent } from './Components/laptops/laptops.component';
 import { PhonesComponent } from './Components/phones/phones.component';
 
+//firebase imports
+import {AngularFireModule} from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -36,7 +40,9 @@ import { PhonesComponent } from './Components/phones/phones.component';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatButtonModule
+    MatButtonModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
