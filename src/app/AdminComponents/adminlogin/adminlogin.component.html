@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Admin Panel</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<form [formGroup]="logInForm" (ngSubmit)="logIn()">
+  <div class="formflex">
+
+    <div class="container flexitem">
+      <mat-toolbar>
+        <mat-toolbar-row class="heading">
+          <h1> LOG IN  </h1>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      </div>
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter your email" formControlName="email">
+        <mat-error *ngIf="logInForm.get('email').invalid">{{message}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input type="password" matInput placeholder="Enter your Password" formControlName="password">
+        <mat-error *ngIf="logInForm.get('password').invalid">{{message}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="container flexitem btn">
+      <button type="submit" [disabled]="logInForm.invalid"  mat-flat-button color="primary">LogIn</button>
+    </div>
+  </div>
+</form>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,22 @@
+export interface phone{
+    heading:string;
+    name:string;
+    price:string;
+    imageLink:string;
+    processor:string;
+    ram:string;
+    storage:string;
+    frontCamera:string;
+    backCamera:string;
+    noOfSim:string;
+    screenSize:string;
+    resolution:string;
+    weight:string;
+    battery:string;
+    wirelessConnectivity:string
+    warrenty:string;
+    inBox:string;
+    rating:string;
+    description:string;
+    affiliatedLink:string;
+}

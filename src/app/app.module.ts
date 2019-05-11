@@ -1,14 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 
 //angular material imports
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatButtonModule} from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material';
+
 
 //components imported
 import { AppComponent } from './app.component';
@@ -19,9 +22,13 @@ import { LaptopsComponent } from './Components/laptops/laptops.component';
 import { PhonesComponent } from './Components/phones/phones.component';
 
 //firebase imports
-import {AngularFireModule} from '@angular/fire';
+import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { TechiseekComponent } from './Components/techiseek/techiseek.component';
+import { AdminComponent } from './AdminComponents/admin/admin.component';
+import { AdminloginComponent } from './AdminComponents/adminlogin/adminlogin.component';
+import { PhonesFormComponent } from './AdminComponents/phones-form/phones-form.component';
 
 
 @NgModule({
@@ -31,9 +38,15 @@ import { environment } from '../environments/environment';
     NavbarComponent,
     SidenavComponent,
     LaptopsComponent,
-    PhonesComponent
+    PhonesComponent,
+    AdminComponent,
+    AdminloginComponent,
+    TechiseekComponent,
+    PhonesFormComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
@@ -41,6 +54,8 @@ import { environment } from '../environments/environment';
     MatIconModule,
     MatSidenavModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],

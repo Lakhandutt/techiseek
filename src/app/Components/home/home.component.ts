@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../../Services/home.service';
+import { phone } from '../../Modals/phone';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { HomeService } from '../../Services/home.service';
 })
 export class HomeComponent implements OnInit {
 
-  homeData:any;
+  homeData:phone[];
 
   constructor(private homeService:HomeService ) { }
   
@@ -16,6 +17,8 @@ export class HomeComponent implements OnInit {
     this.homeService.getHomeData().subscribe(
       response=>{
         console.log(response);
+
+        this.homeData=response;
       }
     )
   }

@@ -7,11 +7,5 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class AppComponent {
 
-  @ViewChild('sidenav') sidenav: any;
-
-  title = 'techiseek';
-
-  changeNavState() {
-    this.sidenav.changeTheState();
-  }
+  
 }

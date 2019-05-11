@@ -1,0 +1,129 @@
+<form [formGroup]="addPhoneForm" (ngSubmit)="addphone()">
+  <div class="formflex">
+
+    <div class="container flexitem">
+      <mat-toolbar>
+        <mat-toolbar-row class="heading">
+          <h1> Add a Phone </h1>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the heading" formControlName="heading">
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the Name" formControlName="name">
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the price" formControlName="price">
+      </mat-form-field>
+    </div>
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the imageLink" formControlName="imageLink">
+      </mat-form-field>
+    </div>
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the processor" formControlName="processor">
+      </mat-form-field>
+    </div>
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the RAM Size" formControlName="ram">
+      </mat-form-field>
+    </div>
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the storage Size" formControlName="storage">
+      </mat-form-field>
+    </div>
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the frontCamera Details" formControlName="frontCamera">
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the backCamera Details" formControlName="backCamera">
+      </mat-form-field>
+    </div>
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the no of sim Details" formControlName="noOfSim">
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the screenSize Details" formControlName="screenSize">
+      </mat-form-field>
+    </div>
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the resolution Details" formControlName="resolution">
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the weight Details" formControlName="weight">
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the battery Details" formControlName="battery">
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the wirelessConnectivity Details" formControlName="wirelessConnectivity">
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the warrenty Details" formControlName="warrenty">
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the inBox items Details" formControlName="inBox">
+      </mat-form-field>
+    </div>
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the rating Details" formControlName="rating">
+      </mat-form-field>
+    </div>
+    <div class="container flexitem">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Enter the description" formControlName="description">
+        </mat-form-field>
+      </div>
+  
+
+
+    <div class="container flexitem">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter the affiliatedLink" formControlName="affiliatedLink">
+      </mat-form-field>
+    </div>
+
+
+    <div class="container flexitem btn">
+      <button type="submit" [disabled]="addPhoneForm.invalid" mat-flat-button color="primary">ADD</button>
+    </div>
+  </div>
+</form>
