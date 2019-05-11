@@ -1,0 +1,30 @@
+a{
+    text-decoration: none;
+    color:white;
+  }
+
+.nav-flex{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0%;
+    padding: 0%;
+      }
+
+.itemsMenu{
+ flex-basis:auto;
+    margin-left: auto;
+  }
+  .homeMenu{
+    flex-basis: auto;
+
+  }
+  @media (max-width:400px){
+   .navbar{
+     height: auto;
+   }
+  .itemsMenu{
+    margin: auto;
+  }
+
+  }
